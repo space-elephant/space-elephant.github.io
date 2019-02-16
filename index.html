@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <noscript>
+      <title>HTML sandbox - no javascript</title>
+      <style>
+	.main {
+	    display: none;
+	}
+      </style>
+    </noscript>
     <title>HTML sandbox</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
     <script src="./link.js"></script>
   </head>
-  <body>
-    <textarea rows="10" cols="50" id="html" style="font-family: monospace">
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
-</html>
-    </textarea><br/>
-    <a href="javascript:run()">run</a>
+  <body onload="setup()">
+    <noscript>
+      <h1>HTML sandbox - no javascript</h1>
+      This page requires javascript. To enable it, follow <a href="https://enable-javascript.com">these instructions</a>.
+    </noscript>
+    <div class="main">
+      <h1>HTML sandbox</h1>
+      This will not remember your previous state when you close your browser. Remember to save you work.<br/>
+      <textarea id="html" cols="50" rows="10" spellcheck="false">
+	Please enable javascript to use this HTML sandbox.</textarea><br/><br/>
+      <a class="run" href="javascript:run();">run</a>
+      <br/>
+    </div>
+    <h2>Caveats</h2>
+    <ul>
+      <li>There is only one file: no <span class="code">&lt;img src=&quot;./piano.jpg&quot;/&gt;</span></li>
+      <li><span class="code">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./style.css&quot;/&gt;</span> will remove the underline from a, except for a:hover</li>
+    </ul>
   </body>
 </html>

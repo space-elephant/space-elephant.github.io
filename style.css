@@ -1,0 +1,14 @@
+a.run {
+    text-decoration: none;
+    border: 1px solid green;
+}
+
+a.run:hover {
+    background-color: lightGreen;
+}
+
+.code {/* for code ouside the textarea */
+    font-family: monospace;
+    background-color: whiteSmoke;
+    border: 1px solid grey;
+}
