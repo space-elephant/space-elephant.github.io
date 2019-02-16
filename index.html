@@ -20,9 +20,10 @@
     </noscript>
     <div class="main">
       <h1>HTML sandbox</h1>
-      This will not remember your previous state when you close your browser. Remember to save you work.<br/>
+      This will not remember your previous state when you close your browser. Remember to save you work.
+      <div id="noCookieWarning"></div>
       <textarea id="html" cols="50" rows="10" spellcheck="false"></textarea><br/><br/>
-      <a class="run" href="javascript:run();">run</a>
+      <a id="run" href="./run.html" onclick="run()">run</a>
       <br/>
     </div>
     <h2>Caveats</h2>
