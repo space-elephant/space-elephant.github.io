@@ -31,7 +31,7 @@ function getCookie(cname) {
 }
 
 function run() {
-    var html = document.getElementById('html').value;
+    var html = document.getElementById('html').innerText;
     if (cookieWorks) {
 	setCookie('value', html);
     } else {
@@ -42,7 +42,7 @@ function run() {
 
 function setup() {
     var cookieVal = getCookie('value');
-    document.getElementById('html').value = cookieVal===null ? startCode : cookieVal;
+    document.getElementById('html').innerText = cookieVal===null ? startCode : cookieVal;
     if (cookieVal === null) {// if it wasn't there before
 	setCookie('value', startCode)// is cookie supported?
 	cookieWorks = false;//getCookie('value') === startCode;

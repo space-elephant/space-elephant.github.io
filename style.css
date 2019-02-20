@@ -7,8 +7,9 @@ a#run:hover {
     background-color: lightGreen;
 }
 
-.code {/* for code ouside the textarea */
+.code {/* for code snipits */
     font-family: monospace;
     background-color: whiteSmoke;
     border: 1px solid grey;
+    white-space: pre;
 }
